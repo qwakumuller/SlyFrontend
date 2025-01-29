@@ -1,0 +1,69 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-table">
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="visitorID">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.visitorID}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> First Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+      </ng-container>
+  
+      <!-- Age Column -->
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> Last Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+      </ng-container>
+  
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+            <!-- Message Column -->
+      <ng-container matColumnDef="message">
+        <th mat-header-cell *matHeaderCellDef> Message </th>
+        <td mat-cell *matCellDef="let element"> {{element.message}} </td>
+      </ng-container>
+
+      <!-- Reply Column -->
+      <ng-container matColumnDef="reply">
+        <th mat-header-cell *matHeaderCellDef> Reply </th>
+      <td 
+        mat-cell *matCellDef="let element;"> 
+        <ng-container>
+          <mat-form-field *ngIf="turnReplyOnM(element.visitorID)">
+            <input matInput [(ngModel)]="element.reply" />
+          </mat-form-field>
+        </ng-container> 
+
+        <ng-container>
+          {{element.message}}
+        </ng-container>
+       
+      </td>
+      </ng-container>
+
+        <!-- Sent Message Button -->
+        <ng-container matColumnDef="Send Reply">
+          <th mat-header-cell *matHeaderCellDef> Send Reply </th>
+          <td mat-cell *matCellDef="let element"> <button (click)="replyVisitor()"> Reply Visitor</button></td>
+        </ng-container>
+
+                <!-- Sent Message Button -->
+        <ng-container matColumnDef="Edit">
+          <th mat-header-cell *matHeaderCellDef> Edit </th>
+          <td mat-cell *matCellDef="let element"> <button (click)="edit1(element.visitorID)"> Edit</button></td>
+        </ng-container>
+  
+      <!-- Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  

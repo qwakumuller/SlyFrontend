@@ -1,0 +1,59 @@
+<div class="formBody">
+
+
+  <footer class="footer">
+  <div class="form-container">
+
+    <!-- <div class="footer-left">
+      <p>&copy; 2025 My Website</p>
+  </div> -->
+    <mat-card class="form-card">
+      <h2 mat-card-title>Connect with Us
+      <div class="social-icons">
+        <a href="https://www.facebook.com/Slyharington" target="_blank">
+          <img src="assets/images/facebook-icon.svg" alt="Facebook" width="30" height="30" />
+        </a>
+      
+        <!-- Twitter -->
+        <a href="https://www.facebook.com/Slyharington" target="_blank">
+            <img src="assets/images/twitter-X.svg" alt="twitterX" width="30" height="30" />
+        </a>
+      
+         <!-- Youtube -->
+         <a href="https://www.youtube.com/@wealthwhile" target="_blank">
+            <img src="assets/images/youtube.svg" alt="Youtube" width="30" height="30" />
+        </a>
+      </div>
+    </h2>
+      <form [formGroup]="loginFr" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" required />
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Email Address</mat-label>
+          <input matInput formControlName="email" type="email" required />
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Message</mat-label>
+          <textarea matInput formControlName="message" rows="4" required></textarea>
+        </mat-form-field>
+        <div class="textButton">
+          <button mat-raised-button color="primary"  type="submit">Submit</button>
+        </div>
+    
+      </form>
+    </mat-card>
+  </div>
+</footer>
+
+</div>
+
+
