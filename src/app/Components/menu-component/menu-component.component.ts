@@ -26,4 +26,9 @@ export class MenuComponentComponent {
     this.router.navigateByUrl("/");
   }
 
+
+  navigateRegister(){
+    this.router.navigateByUrl("/register");
+  }
+
 }

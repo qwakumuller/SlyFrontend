@@ -1,0 +1,114 @@
+<div >
+
+
+    <div class="form-container">
+  
+      <!-- <div class="footer-left">
+        <p>&copy; 2025 My Website</p>
+    </div> -->
+      <mat-card class="form-card">
+        <h2 mat-card-title>Connect with Us
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Slyharington" target="_blank">
+            <img src="assets/images/facebook-icon.svg" alt="Facebook" width="30" height="30" />
+          </a>
+        
+          <!-- Twitter -->
+          <a href="https://www.facebook.com/Slyharington" target="_blank">
+              <img src="assets/images/twitter-X.svg" alt="twitterX" width="30" height="30" />
+          </a>
+        
+           <!-- Youtube -->
+           <a href="https://www.youtube.com/@wealthwhile" target="_blank">
+              <img src="assets/images/youtube.svg" alt="Youtube" width="30" height="30" />
+          </a>
+        </div>
+      </h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required />
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" required />
+          </mat-form-field>
+    
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Email Address</mat-label>
+            <input matInput formControlName="email" type="email" required />
+          </mat-form-field>
+    
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Country</mat-label>
+            <mat-select formControlName="country">
+              <mat-option *ngFor="let country of countries" [value]="country" >
+                {{country}} 
+              </mat-option>
+            
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Address</mat-label>
+            <textarea matInput formControlName="address" rows="4" required></textarea>
+          </mat-form-field>
+          
+
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>City</mat-label>
+            <textarea matInput formControlName="city" rows="4" required></textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>ZipCode</mat-label>
+            <textarea matInput formControlName="zipCode" rows="4" required></textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Phone</mat-label>
+            <textarea matInput formControlName="phone" rows="4" required></textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Industry Focus</mat-label>
+            <mat-select formControlName="industryFocus">
+              <mat-option *ngFor="let industry of industryFocus" [value]="industry" > {{industry}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Age Group</mat-label>
+            <mat-select formControlName="ageGroup">
+              <mat-option *ngFor="let age of ageGroups" [value]="age" > {{age}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Race</mat-label>
+            <mat-select formControlName="race">
+              <mat-option *ngFor="let race of races" [value]="race" > {{race}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option *ngFor="let gender of genders" [value]="gender" > {{gender}} </mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+
+          <div class="textButton">
+            <button mat-raised-button color="primary"  type="submit">Submit</button>
+          </div>
+      
+        </form>
+      </mat-card>
+    </div>
+  
+  </div>
+  
+  
+  
