@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { UserService } from '../../Services/user.service';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,7 @@ import { UserService } from '../../Services/user.service';
     MatInputModule,         
     MatButtonModule,         
     MatFormFieldModule,      
-    MatSelectModule,MatCardModule,FormsModule
+    MatSelectModule,MatCardModule,FormsModule,MatIcon
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
@@ -93,14 +94,14 @@ export class RegisterComponent {
   })
 
   onSubmit(){
-    this.userService.createUser(this.registerForm.value).subscribe({
-      next: (response) => {
-        console.log(response)
-      },
-      error: (error) => {
-        console.log(error);
-      }
-    })
+    // this.userService.createUser(this.registerForm.value).subscribe({
+    //   next: (response) => {
+    //     console.log(response)
+    //   },
+    //   error: (error) => {
+    //     console.log(error);
+    //   }
+    // })
 
   }
 

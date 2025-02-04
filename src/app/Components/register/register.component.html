@@ -98,10 +98,12 @@
               <mat-option *ngFor="let gender of genders" [value]="gender" > {{gender}} </mat-option>
             </mat-select>
           </mat-form-field>
+
           
 
           <div class="textButton">
-            <button mat-raised-button color="primary"  type="submit">Submit</button>
+            <mat-icon svgIcon="paypal"></mat-icon>
+            <button mat-raised-button color="primary"  type="submit">Pay</button>
           </div>
       
         </form>

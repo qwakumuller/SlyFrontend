@@ -31,4 +31,8 @@ export class MenuComponentComponent {
     this.router.navigateByUrl("/register");
   }
 
+  navigateVisitor(){
+    this.router.navigateByUrl("/getAllVisitor");
+  }
+
 }
