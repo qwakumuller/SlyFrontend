@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { UserService } from '../../Services/user.service';
 import { MatIcon } from '@angular/material/icon';
+import { RegisterService } from '../../Services/register.service';
 
 @Component({
   selector: 'app-register',
@@ -28,8 +29,10 @@ import { MatIcon } from '@angular/material/icon';
 })
 export class RegisterComponent {
 
-  constructor(private registerFormBuilder: FormBuilder, private userService: UserService){}
-  
+  constructor(private registerFormBuilder: FormBuilder, private userService: UserService, private registerService: RegisterService){}
+  redirectURL : Record<string, any> = {}
+
+
   selectedCountry = ""
   selectedFocus = ""
   selectedAge = ""
@@ -94,14 +97,18 @@ export class RegisterComponent {
   })
 
   onSubmit(){
-    // this.userService.createUser(this.registerForm.value).subscribe({
-    //   next: (response) => {
-    //     console.log(response)
-    //   },
-    //   error: (error) => {
-    //     console.log(error);
-    //   }
-    // })
+    this.registerService.createPayment().subscribe({
+      next: (response) => {
+        this.redirectURL = response
+        window.location.href = this.redirectURL["url"]
+        console.log(this.redirectURL["url"])
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
+
+    this.registerForm.reset();
 
   }
 

@@ -44,7 +44,10 @@ export class VisitorFormComponent {
       error: (error) => {
         console.log(error);
       }
+      
     })
+
+    this.loginFr.reset();
 
   }
 

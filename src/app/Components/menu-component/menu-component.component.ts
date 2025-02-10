@@ -13,26 +13,43 @@ import { Router,RouterModule,RouterOutlet  } from '@angular/router';
   styleUrl: './menu-component.component.css'
 })
 export class MenuComponentComponent {
+  icon = 'menu';
 
+  isButtonClicked: boolean = false;
   constructor(private router: Router ){
 
   }
 
   navigateAboutUs(){
+    this.icon = 'menu'
     this.router.navigateByUrl("/about-us");
   }
 
   homepage(){
+    this.icon = 'menu'
     this.router.navigateByUrl("/");
   }
 
 
   navigateRegister(){
+    this.icon = 'menu'
     this.router.navigateByUrl("/register");
   }
 
   navigateVisitor(){
+    this.icon = 'menu'
     this.router.navigateByUrl("/getAllVisitor");
   }
+
+  onButtonClick(){
+    this.isButtonClicked = true;
+    if(this.icon === 'menu'){
+      this.icon = 'close'
+    }else{
+      this.icon = 'menu';
+    }
+  }
+
+  
 
 }
