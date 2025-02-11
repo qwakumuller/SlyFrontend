@@ -34,6 +34,7 @@ import { Observable } from 'rxjs';
 })
 export class VisitorPageComponent implements OnInit {
 
+  showColumn: boolean=  false;
   turnReplyOn : boolean = false;
   turnReadOnlyOn : boolean = true;
 

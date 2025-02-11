@@ -2,6 +2,14 @@
     display: flex;
     gap: 15px;
   }
+
+
+  img{
+    width: 50%;
+    height: auto;
+    margin-left: 50%;
+    margin-top: 0%;
+  }
   
   .social-icons a {
     font-size: 24px; /* Size of the icons */
@@ -27,5 +35,18 @@
 
 #about-wmsheader{
   color: #ff8500;
-  padding-left: 40%;;
+  padding-left: 40%;
+  font-size: x-large;
+  margin-top: 5%;
+}
+
+#slywealth{
+ text-align: left;
+ align-items: left;
+ margin: 0;
+ padding: 0;
+ max-width: 50%;
+ line-height: 1.6;
+ font-size: xx-large;
+
 }

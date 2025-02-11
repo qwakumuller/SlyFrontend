@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
 
   <mat-toolbar-row>
-    <span class="logoName" (click)="homepage()">SLY CONFERENCE</span>
+    <span class="logoName" (click)="homepage()">Wealth Mindset Summit</span>
     <span class="example-spacer"></span>
 
 
 
-    <button mat-button [matMenuTriggerFor]="menu"><mat-icon class="example-icon" aria-hidden="false" fontIcon="home"></mat-icon></button>
+    <button (click)="onButtonClick()" [matMenuTriggerFor]="menu"><mat-icon class="example-icon" aria-hidden="false" fontIcon={{icon}}></mat-icon></button>
     <mat-menu #menu="matMenu">
     <!-- <div class="matMenu"> -->
       <button mat-menu-item  (click)="navigateAboutUs()">About WMS </button>
