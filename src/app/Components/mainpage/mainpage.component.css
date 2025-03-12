@@ -2,3 +2,16 @@ img{
     width: 100%;
     height: auto;
 }
+
+.ud {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+
+.uc {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2%;
+}

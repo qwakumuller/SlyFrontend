@@ -41,6 +41,12 @@ export class MenuComponentComponent {
     this.router.navigateByUrl("/getAllVisitor");
   }
 
+  navigateSlide(){
+    this.icon = 'menu'
+    this.router.navigateByUrl("/slide");
+
+  }
+
   onButtonClick(){
     this.isButtonClicked = true;
     if(this.icon === 'menu'){

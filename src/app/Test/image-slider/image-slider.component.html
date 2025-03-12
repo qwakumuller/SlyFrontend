@@ -1,0 +1,13 @@
+<p>image-slider works!</p>
+<div class="relative w-full max-w-3xl mx-auto overflow-hidden">
+    <div class="flex transition-transform duration-500" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'" *ngFor="let img of images">
+      <img  [src]="img" class="w-full h-64 object-cover flex-shrink-0">
+    </div>
+  
+    <!-- Prev Button -->
+    <button (click)="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❮</button>
+  
+    <!-- Next Button -->
+    <button (click)="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❯</button>
+  </div>
+  

@@ -6,6 +6,7 @@ import { MainpageComponent } from './Components/mainpage/mainpage.component';
 import { VisitorPageComponent } from './Components/visitor-page/visitor-page.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-found.component';
+import { ImageSliderComponent } from './Test/image-slider/image-slider.component';
 
 export const routes: Routes = [
     {path: "getAllVisitor", component: VisitorPageComponent },
@@ -15,7 +16,9 @@ export const routes: Routes = [
     {path: "about-us", component: AboutUsComponent },
     {path: '', component: MainpageComponent},
     {path: "mainpage", component: MainpageComponent },
+    {path: "slide", component: ImageSliderComponent},
     {path: "**", component: PageNotFoundComponent}
+   
     
   
 

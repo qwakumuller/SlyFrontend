@@ -5,6 +5,7 @@ import { VisitorFormComponent } from './Components/visitor-form/visitor-form.com
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ImageSliderComponent } from './Test/image-slider/image-slider.component';
 
 @Component({
   selector: 'app-root',
