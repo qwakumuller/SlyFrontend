@@ -17,15 +17,21 @@
 
     <!-- Dropdown Menu -->
     <mat-menu #menu="matMenu" class="custom-menu">
+       <button mat-menu-item (click)="homepage()">
+        <mat-icon>home</mat-icon> Home
+      </button>
       <button mat-menu-item (click)="navigateAboutUs()">
         <mat-icon>info</mat-icon> About WMS
       </button>
-      <button mat-menu-item (click)="navigateRegister()">
+      <!-- <button mat-menu-item (click)="navigateRegister()">
         <mat-icon>app_registration</mat-icon> Register
-      </button>
+      </button> -->
       <button mat-menu-item (click)="navigateSlide()">
         <mat-icon>record_voice_over</mat-icon> Speakers
       </button>
+      <!-- <button mat-menu-item (click)=" navigateVisitor()">
+        <mat-icon>record_voice_over</mat-icon> Registered Users
+      </button> -->
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

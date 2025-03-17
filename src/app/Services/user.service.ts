@@ -9,8 +9,8 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl: String = "http://35.239.227.64:443/"
-  //baseUrl: String = "http://localhost:8080/"
+  //baseUrl: String = "http://35.239.227.64:443/"
+  baseUrl: String = "http://192.168.1.252:8080/"
 
   createUser(loginRequest: any){
     return this.http.post<any>(this.baseUrl+"createVisitor",loginRequest)
