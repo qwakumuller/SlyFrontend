@@ -1,14 +1,61 @@
-example-icon {
-    padding: 0 14px;
-  }
-  .example-spacer {
-    flex: 2 2;
-  }
- 
-  .logoName {
-    font-size: smaller;
-  }
+/* Toolbar Styling */
+.toolbar {
+  background: linear-gradient(45deg, #00796b, #004d40);
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+}
 
-  .matMenu {
-    width: 200px;
-  }
+/* Logo Name Styling */
+.logoName {
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.logoName:hover {
+  color: #ffcc00;
+}
+
+/* Spacer to push menu button to the right */
+.spacer {
+  flex: 1;
+}
+
+/* Menu Button */
+mat-icon {
+  font-size: 28px;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover mat-icon {
+  transform: scale(1.1);
+}
+
+/* Custom Menu Styling */
+.custom-menu {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Items */
+.mat-menu-item {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.mat-menu-item:hover {
+  background: rgba(0, 121, 107, 0.1);
+}
+
+.logo {
+  height: 90px; /* Adjust based on your design */
+  cursor: pointer;
+  margin-right: 0%;
+}

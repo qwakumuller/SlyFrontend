@@ -22,7 +22,7 @@ import { RegisterService } from '../../Services/register.service';
     MatInputModule,         
     MatButtonModule,         
     MatFormFieldModule,      
-    MatSelectModule,MatCardModule,FormsModule,MatIcon
+    MatSelectModule,MatCardModule,FormsModule
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
