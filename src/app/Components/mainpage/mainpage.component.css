@@ -1,4 +1,118 @@
-img{
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Content Container */
+  .content-container {
+    text-align: center;
+  }
+  
+  /* Parallax Effect for Hero Section */
+  .parallax-container {
+    position: relative;
     width: 100%;
-    height: auto;
-}
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .parallax-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Hero Image */
+  .bg-hero {
+    background-image: url('/assets/images/2025.JPG');
+  }
+  
+  /* Overlay Text */
+  .overlay-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .overlay-text h1, .overlay-text h2 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .overlay-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  /* Payment Section (No Parallax) */
+  .payment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .payment-img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .payment-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .payment-text p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Speakers Animation */
+  .speakers-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin: 40px 0;
+  }
+  
+  .animated-speakers {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007BFF;
+    white-space: nowrap;
+    position: absolute;
+    animation: moveSpeakers 6s linear infinite;
+  }
+  
+  /* Animation */
+  @keyframes moveSpeakers {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  

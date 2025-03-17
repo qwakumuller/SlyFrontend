@@ -1,23 +1,31 @@
-<mat-toolbar color="primary">
-
+<mat-toolbar color="primary" class="toolbar">
   <mat-toolbar-row>
-    <span class="logoName" (click)="homepage()">Wealth Mindset Summit</span>
-    <span class="example-spacer"></span>
+    <!-- Logo and Name -->
+    <!-- Logo as an Image -->
+    <img src="assets/images/banner.webp" alt="Wealthy Mindset Summit" class="logo" (click)="homepage()"/>
 
+    <!-- Spacer to push menu to the right -->
+    <span class="spacer"></span>
 
+    <!-- Spacer to push menu to the right -->
+    <span class="spacer"></span>
 
-    <button (click)="onButtonClick()" [matMenuTriggerFor]="menu"><mat-icon class="example-icon" aria-hidden="false" fontIcon={{icon}}></mat-icon></button>
-    <mat-menu #menu="matMenu">
-    <!-- <div class="matMenu"> -->
-      <button mat-menu-item  (click)="navigateAboutUs()">About WMS </button>
-      <button mat-menu-item (click)="navigateRegister()" >Register </button>
-      <button mat-menu-item (click)="navigateVisitor()" >Visitors-TobeRemoved </button>
-      <button mat-menu-item >Speakers</button>
-    <!-- </div> -->
+    <!-- Navigation Menu Button -->
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+      <mat-icon>{{ icon }}</mat-icon>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <mat-menu #menu="matMenu" class="custom-menu">
+      <button mat-menu-item (click)="navigateAboutUs()">
+        <mat-icon>info</mat-icon> About WMS
+      </button>
+      <button mat-menu-item (click)="navigateRegister()">
+        <mat-icon>app_registration</mat-icon> Register
+      </button>
+      <button mat-menu-item (click)="navigateSlide()">
+        <mat-icon>record_voice_over</mat-icon> Speakers
+      </button>
     </mat-menu>
-
   </mat-toolbar-row>
-
 </mat-toolbar>
-
-

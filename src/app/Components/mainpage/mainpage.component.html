@@ -1,4 +1,29 @@
-<div class="uc">
-    <img src="assets/images/2025.JPG" alt="Facebook" />
-</div>   
-<app-visitor-form></app-visitor-form>  
+<div class="content-container">
+    <!-- Hero Section with Parallax Effect -->
+    <div class="parallax-container">
+      <div class="parallax-bg bg-hero"></div>
+      <div class="overlay-text">
+        <h1>Wealthy Mindset Summit 2025</h1>
+        <p>Empowering you to achieve financial success</p>
+      </div>
+    </div>
+  
+    <!-- Payment Section (No Parallax) -->
+    <div class="payment-container">
+      <img class="payment-img" src="assets/images/payment.JPG" alt="Payment Options" />
+      <div class="payment-text">
+        <h2>Secure Your Spot</h2>
+        <p>Join the movement and reserve your place today!</p>
+      </div>
+    </div>
+
+    <!-- Animated "Speakers" Text Section -->
+    <div class="speakers-container">
+        <h2 class="animated-speakers" (click)="navigateSpeaker()">Check out our Speakers for Wealthy Mindset this year </h2>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-card">
+      <app-visitor-form></app-visitor-form>
+    </div>
+</div>

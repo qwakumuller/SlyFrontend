@@ -1,0 +1,16 @@
+<div class="slider">
+    <div class="slides">
+      <div
+        *ngFor="let img of images; let i = index"
+        class="slide"
+        [class.active]="i === currentIndex"
+      >
+        <img [src]="img" loading="lazy" />
+      </div>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <button (click)="prevSlide()" class="prev">&#10094;</button>
+    <button (click)="nextSlide()" class="next">&#10095;</button>
+  </div>
+  

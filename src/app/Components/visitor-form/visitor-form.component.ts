@@ -33,7 +33,7 @@ export class VisitorFormComponent {
     firstName: [null, [Validators.required, Validators.max(8)]],
     lastName: [null, [Validators.required]],
     email: [null],
-    message: [null],
+    phone: [null],
   })
 
   onSubmit(){

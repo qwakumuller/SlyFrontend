@@ -54,7 +54,7 @@ export class VisitorPageComponent implements OnInit {
     this.userService.getAllVisitors()
     .subscribe({
       next : (response) => {
-        console.log(response)
+        //console.log(response)
         this.dataSource = response;
       }, 
       error: (error) => {
@@ -69,7 +69,7 @@ export class VisitorPageComponent implements OnInit {
   replyVisitor(){
     this.userService.createUser(this.dataSource[5]).subscribe({
       next: (response) => {
-        console.log(response)
+        //console.log(response)
       },
       error: (error) => {
         console.log(error);
@@ -89,7 +89,7 @@ export class VisitorPageComponent implements OnInit {
   }
 
   turnReplyOnM(i: number){
-    console.log(i + "I is here")
+    //console.log(i + "I is here")
     return false;
 
   }
