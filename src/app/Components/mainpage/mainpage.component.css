@@ -115,4 +115,16 @@ html, body {
       transform: translateX(100%);
     }
   }
+  @media (max-width: 768px) {
+    .parallax-bg {
+      background-attachment: scroll;
+      background-size: contain; /* Adjusts size to fit */
+      height: 50vh; /* Reduce height for better mobile fit */
+    }
+
+    .parallax-container {
+      height: 50vh; /* Adjust container height */
+    }
+  }
+  
   

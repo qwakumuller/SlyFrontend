@@ -2,49 +2,67 @@
   <footer class="footer">
     <div class="form-container">
       <mat-card class="form-card">
-        <h2 mat-card-title class="title">
-          Connect with Us
-        </h2>
+        <h2 mat-card-title class="title">Register Here</h2>
 
         <!-- Social Media Icons -->
+        <div class="social-frame">
         <div class="social-icons">
-          <a href="https://www.facebook.com/Slyharington" target="_blank">
-            <img src="assets/images/facebook-icon.svg" alt="Facebook" />
+          <p class="social-text">Connect With Us on Social Media</p>
+          <a href="https://www.facebook.com/Slyharington" target="_blank" class="social-link facebook">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
           </a>
-
-          <a href="https://www.facebook.com/Slyharington" target="_blank">
-            <img src="assets/images/twitter-X.svg" alt="TwitterX" />
+          <a href="https://www.instagram.com/wealthymindsetsummit" target="_blank" class="social-link instagram">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
           </a>
-
-          <a href="https://www.youtube.com/@sylvesterwealth" target="_blank">
-            <img src="assets/images/youtube.svg" alt="YouTube" />
+          <a href="https://www.youtube.com/@sylvesterwealth" target="_blank" class="social-link youtube">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" />
           </a>
+        </div>
         </div>
 
         <!-- Contact Form -->
         <form [formGroup]="loginFr" (ngSubmit)="onSubmit()" class="contact-form">
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>First Name</mat-label>
-            <input matInput formControlName="firstName" required />
-          </mat-form-field>
+          <div class="form-row">
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>First Name</mat-label>
+              <input matInput formControlName="firstName" required />
+              <mat-error *ngIf="loginFr.get('firstName')?.invalid && loginFr.get('firstName')?.touched">
+                <span *ngIf="loginFr.get('firstName')?.errors?.['required']">Required.</span>
+                <span *ngIf="loginFr.get('firstName')?.errors?.['maxlength']">Max 8 characters.</span>
+              </mat-error>
+            </mat-form-field>
 
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Last Name</mat-label>
-            <input matInput formControlName="lastName" required />
-          </mat-form-field>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label>Last Name</mat-label>
+              <input matInput formControlName="lastName" required />
+              <mat-error *ngIf="loginFr.get('lastName')?.invalid && loginFr.get('lastName')?.touched">
+                <span *ngIf="loginFr.get('lastName')?.errors?.['required']">Required.</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
 
           <mat-form-field appearance="outline" class="form-field">
             <mat-label>Email Address</mat-label>
             <input matInput formControlName="email" type="email" required />
+            <mat-error *ngIf="loginFr.get('email')?.invalid && loginFr.get('email')?.touched">
+              <span *ngIf="loginFr.get('email')?.errors?.['required']">Required.</span>
+              <span *ngIf="loginFr.get('email')?.errors?.['email']">Invalid email.</span>
+            </mat-error>
           </mat-form-field>
 
           <mat-form-field appearance="outline" class="form-field">
             <mat-label>Phone Number</mat-label>
-            <input matInput formControlName="phone" type="tel" required />
+            <input matInput formControlName="message" type="tel" required />
+            <mat-error *ngIf="loginFr.get('message')?.invalid && loginFr.get('message')?.touched">
+              <span *ngIf="loginFr.get('message')?.errors?.['required']">Required.</span>
+              <span *ngIf="loginFr.get('message')?.errors?.['pattern']">Must be a 10-digit number.</span>
+            </mat-error>
           </mat-form-field>
 
           <div class="submit-container">
-            <button mat-raised-button color="primary" type="submit">Submit</button>
+            <button mat-raised-button color="primary" type="submit" class="submitButton" [disabled]="loginFr.invalid">
+              Submit
+            </button>
           </div>
         </form>
       </mat-card>

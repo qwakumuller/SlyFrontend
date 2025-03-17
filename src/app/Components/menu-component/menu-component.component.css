@@ -1,6 +1,6 @@
 /* Toolbar Styling */
 .toolbar {
-  background: linear-gradient(45deg, #00796b, #004d40);
+  background: linear-gradient(45deg, #ff8500, #ff8500);
   color: white;
   padding: 10px 20px;
   font-size: 18px;
@@ -20,7 +20,7 @@
 
 /* Spacer to push menu button to the right */
 .spacer {
-  flex: 1;
+  flex-grow: 1;
 }
 
 /* Menu Button */
@@ -58,4 +58,21 @@ button:hover mat-icon {
   height: 90px; /* Adjust based on your design */
   cursor: pointer;
   margin-right: 0%;
+}
+
+/* Media Query for Mobile Optimization */
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 0 8px;
+  }
+
+  .logo {
+    height: 35px;
+    max-width: 120px;
+  }
+
+  .custom-menu button {
+    width: 100%;
+    text-align: left;
+  }
 }
