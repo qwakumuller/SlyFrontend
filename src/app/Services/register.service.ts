@@ -8,8 +8,8 @@ import { Observable, map } from 'rxjs';
 })
 export class RegisterService {
 
-  baseUrl: String = "http://192.168.1.252:8080/"
-  //baseUrl: String = "http://35.239.227.64:443/"
+  //baseUrl: String = "http://192.168.1.252:8080/"
+  baseUrl: String = "http://35.239.227.64:443/"
   constructor(private http: HttpClient) { }
 
   createPayment(){
